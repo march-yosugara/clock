@@ -1,5 +1,7 @@
 # Clock
 
+![clock_sample](./clock_sample.gif)
+
 ## **Just a Clock!**  
 
 日付付き・秒単位表示の時計が欲しかった。。。  
