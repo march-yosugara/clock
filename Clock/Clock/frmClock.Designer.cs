@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clock));
-            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             this.LbTime = new System.Windows.Forms.Label();
             this.LbDate = new System.Windows.Forms.Label();
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
@@ -40,10 +40,10 @@
             this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // timer
+            // Timer
             // 
-            this.timer.Enabled = true;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            this.Timer.Enabled = true;
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // LbTime
             // 
@@ -53,7 +53,7 @@
             this.LbTime.Location = new System.Drawing.Point(0, 41);
             this.LbTime.Margin = new System.Windows.Forms.Padding(0);
             this.LbTime.Name = "LbTime";
-            this.LbTime.Size = new System.Drawing.Size(204, 40);
+            this.LbTime.Size = new System.Drawing.Size(284, 40);
             this.LbTime.TabIndex = 3;
             this.LbTime.Text = "00:00:00";
             this.LbTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -67,9 +67,9 @@
             this.LbDate.Location = new System.Drawing.Point(0, 0);
             this.LbDate.Margin = new System.Windows.Forms.Padding(0);
             this.LbDate.Name = "LbDate";
-            this.LbDate.Size = new System.Drawing.Size(204, 40);
+            this.LbDate.Size = new System.Drawing.Size(284, 40);
             this.LbDate.TabIndex = 4;
-            this.LbDate.Text = "0000/00/00";
+            this.LbDate.Text = "0000/00/00(ddd)";
             this.LbDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LbDate.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Clock_MouseUp);
             // 
@@ -94,14 +94,14 @@
             // 
             this.MiDisplay.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.MiDisplay.Name = "MiDisplay";
-            this.MiDisplay.Size = new System.Drawing.Size(180, 24);
+            this.MiDisplay.Size = new System.Drawing.Size(123, 24);
             this.MiDisplay.Text = "Display";
             this.MiDisplay.Click += new System.EventHandler(this.MiDisplay_Click);
             // 
             // MiExit
             // 
             this.MiExit.Name = "MiExit";
-            this.MiExit.Size = new System.Drawing.Size(180, 24);
+            this.MiExit.Size = new System.Drawing.Size(123, 24);
             this.MiExit.Text = "Exit";
             this.MiExit.Click += new System.EventHandler(this.MiExit_Click);
             // 
@@ -110,7 +110,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(204, 81);
+            this.ClientSize = new System.Drawing.Size(284, 81);
             this.Controls.Add(this.LbDate);
             this.Controls.Add(this.LbTime);
             this.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -130,7 +130,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.Label LbTime;
         private System.Windows.Forms.Label LbDate;
         private System.Windows.Forms.NotifyIcon NotifyIcon;
